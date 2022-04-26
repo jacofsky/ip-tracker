@@ -3,3 +3,27 @@
     height: 40vh;
     width: 100vw;
 }
+
+.infoPanel {
+    background-color: red;
+    width: 60vw;
+    height: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50%;
+    border-radius: 1rem;
+    
+}
+
+.boxDivider {
+    width: 1px;
+    height: 50%;
+    background-color: black;
+    margin: 50% auto;
+}
+
+.panelText {
+    display: flex;
+}

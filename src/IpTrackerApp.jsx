@@ -1,28 +1,25 @@
-import React from 'react'
-import { fetchApi } from './helpers/FetchIp'
-import { useForm } from './hook/useForm'
+import React, {useReducer} from 'react'
+import Header from './components/Header'
+import InformationPanel from './components/InformationPanel'
+import { IpContext } from './context/ipContext'
+import ipReducer from './context/ipReducer'
+
 import './styles/styles.css'
 
 const IpTrackerApp = () => {
+   
 
-    const {value, onChange, reset} = useForm()
-
-    const handleSumbit = () => {
-        console.log(value)
-        fetchApi(value)
-        reset()
-    }
+    const [ipInfo, dispatch] = useReducer(ipReducer)
     
     return (
-        <div className='header'>
-            <h1 className='text-center w-100 pt-4 text-light'>IP Adress Tracker</h1>
-
-            <div className='d-flex w-25 mx-auto aling-items-strech'>
-                <input value={value} onChange={(e) => onChange(e.target.value)} type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
-                <button onClick={handleSumbit}> {'>'} </button>
+        
+        <IpContext.Provider value={{ipInfo, dispatch}}>
+            <div>
+                <Header />
+                <InformationPanel />
+                <h1>Hola</h1>
             </div>
-            
-        </div>
+        </IpContext.Provider>
     )
 }
 
