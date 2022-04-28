@@ -1,7 +1,7 @@
 import { types } from '../types/types';
 
 const intialState = {
-    data: null,
+    ip: null,
     loading: false
 }
 
@@ -18,7 +18,7 @@ const ipReducer = (state = intialState, action) => {
             return {
                 ...state,
                 loading: false,
-                data: action.payload
+                ip: action.payload
             }
     
         default:

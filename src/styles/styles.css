@@ -5,8 +5,8 @@
 }
 
 .infoPanel {
-    background-color: red;
-    width: 60vw;
+    background-color: white;
+    width: 70vw;
     height: 20vh;
     left: 0;
     right: 0;
@@ -14,6 +14,7 @@
     position: absolute;
     bottom: 50%;
     border-radius: 1rem;
+    z-index: 100;
     
 }
 
@@ -26,4 +27,8 @@
 
 .panelText {
     display: flex;
+}
+
+.leaflet-container {
+    z-index: 0;
 }

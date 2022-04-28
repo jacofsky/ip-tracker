@@ -1,25 +1,24 @@
-import React, {useReducer} from 'react'
+import React from 'react'
+import { Provider } from 'react-redux'
+
 import Header from './components/Header'
 import InformationPanel from './components/InformationPanel'
-import { IpContext } from './context/ipContext'
-import ipReducer from './context/ipReducer'
-
+import Map from './components/Map'
+import { store } from './store/ipContext'
 import './styles/styles.css'
 
-const IpTrackerApp = () => {
-   
 
-    const [ipInfo, dispatch] = useReducer(ipReducer)
-    
+const IpTrackerApp = () => {
+       
     return (
         
-        <IpContext.Provider value={{ipInfo, dispatch}}>
+        <Provider store={store}>
             <div>
                 <Header />
                 <InformationPanel />
-                <h1>Hola</h1>
+                <Map />
             </div>
-        </IpContext.Provider>
+        </Provider>
     )
 }
 
