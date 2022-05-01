@@ -10,3 +10,5 @@ export const setData = (data) => ({
     }
     
 })
+
+export const setError = () => ({type: types.setError})

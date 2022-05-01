@@ -35,7 +35,7 @@ const InformationPanel = () => {
                 <div className='col-12 col-md-2 panelText'>
                     <div>
                         <p>LOCATION</p>
-                        <p>{ip && ip.data.location.city}, {ip && ip.data.location.region}</p>
+                        <p className='locationIspOverflow'>{ip && ip.data.location.city + ','} {ip && ip.data.location.region}</p>
                     </div>
     
                 </div>
@@ -60,7 +60,7 @@ const InformationPanel = () => {
     
                     <div>
                         <p>ISP</p>
-                        <p>{ip && ip.data.isp}</p>
+                        <p className='locationIspOverflow'>{ip && ip.data.isp}</p>
                     </div>
                     
                 </div>

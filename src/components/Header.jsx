@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { fetchApi } from '../helpers/FetchIp'
 import { useForm } from '../hook/useForm'
-import { setData, setLoading } from "../store/ipActions";
+import { setData, setError, setLoading } from "../store/ipActions";
 
 
 const Header = () => {
@@ -17,7 +17,13 @@ const Header = () => {
     dispatch(setLoading())
     reset()
     const {data} = await fetchApi(value)
-    dispatch(setData(data))
+
+    if(data) {
+      dispatch(setData(data))
+    } else {
+      console.log('error')
+      dispatch(setError())
+    }
   }
 
 

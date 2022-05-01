@@ -1,7 +1,11 @@
+
+
 .header {
     background-image: url("../assets/pattern-bg.png");
     height: 40vh;
     width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .infoPanel {
@@ -27,8 +31,44 @@
 
 .panelText {
     display: flex;
+    height: 100%;
+}
+
+.panelText div p {
+    overflow-y: auto;
 }
 
 .leaflet-container {
     z-index: 0;
+}
+
+.locationIspOverflow {
+    height: 60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* width */
+.locationIspOverflow::-webkit-scrollbar {
+    width: 10px;
+    left: 10;
+}
+
+/* Track */
+.locationIspOverflow::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+/* Handle */
+.locationIspOverflow::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+.locationIspOverflow::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

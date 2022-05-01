@@ -20,6 +20,9 @@ const ipReducer = (state = intialState, action) => {
                 loading: false,
                 ip: action.payload
             }
+
+        case types.setError:
+            return intialState
     
         default:
             return state
