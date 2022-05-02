@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import { useSelector } from 'react-redux';
 import IconLocation from './IconLocation';
@@ -34,7 +34,7 @@ const Map = () => {
 
   return (
     
-        <MapContainer style={{ height: '60vh' }} center={positon.curretLocationCenter} zoom={13} >
+        <MapContainer style={{ height: '70vh' }} center={positon.curretLocationCenter} zoom={13} >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />

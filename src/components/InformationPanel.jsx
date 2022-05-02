@@ -21,48 +21,39 @@ const InformationPanel = () => {
         return (
             <div className='infoPanel row p-3 justify-content-center' >
                 
-                <div className='col-12 col-md-2 panelText'>
-                    <div>
-                        <p>IP ADRESS</p>
-                        <p> {ip && ip.data.ip}</p>
-                    </div>
+                <div className='col-12 col-sm-2 justify-content-center justify-content-sm-start panelText'>
+                        <p className='panel-tittle text-center'>IP ADRESS</p>
+                        <p className='panel-textIp text-center'> {ip && ip.data.ip}</p>
                 </div>
     
-                <div className='col-md-1'>
+                <div className='col-sm-1 d-sm-inline-block d-none'>
                     <div className='boxDivider'></div>
                 </div>
                 
-                <div className='col-12 col-md-2 panelText'>
-                    <div>
-                        <p>LOCATION</p>
-                        <p className='locationIspOverflow'>{ip && ip.data.location.city + ','} {ip && ip.data.location.region}</p>
-                    </div>
+                <div className='col-12 col-sm-2 justify-content-center justify-content-sm-start panelText'>
+                        <p className='panel-tittle text-center'>LOCATION</p>
+                        <p className='locationIspOverflow panel-textIp text-center'>{ip && ip.data.location.city + ','} {ip && ip.data.location.region}</p>
     
                 </div>
                 
-                <div className='col-md-1'>
+                <div className='col-sm-1 d-sm-inline-block d-none'>
                     <div className='boxDivider'></div>
                 </div>
                 
-                <div className='col-12 col-md-2 panelText'>
-                    <div>
-                        <p>TIMEZONE</p>
-                        <p>{ip && ip.data.location.timezone}</p>
-                    </div>
+                <div className='col-12 col-sm-2 justify-content-center justify-content-sm-start panelText'>
+                
+                        <p className='panel-tittle text-center'>TIMEZONE</p>
+                        <p className='panel-textIp text-center'>{ip && ip.data.location.timezone}</p>
     
                 </div>
                 
-                <div className='col-md-1'>
+                <div className='col-sm-1 d-sm-inline-block d-none'>
                     <div className='boxDivider'></div>
                 </div>
                 
-                <div className='col-12 col-md-2'>
-    
-                    <div>
-                        <p>ISP</p>
-                        <p className='locationIspOverflow'>{ip && ip.data.isp}</p>
-                    </div>
-                    
+                <div className='col-12 col-sm-2 justify-content-center justify-content-sm-start panelText'>
+                        <p className='panel-tittle text-center'>ISP</p>
+                        <p className='locationIspOverflow panel-textIp text-center'>{ip && ip.data.isp}</p>
                 </div>
     
                 

@@ -2,7 +2,8 @@ import { types } from '../types/types';
 
 const intialState = {
     ip: null,
-    loading: false
+    loading: false,
+    ok: true
 }
 
 const ipReducer = (state = intialState, action) => {
@@ -11,18 +12,25 @@ const ipReducer = (state = intialState, action) => {
         case types.loading:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                ok: true,
             }
         
         case types.ipInfoLoaded:
             return {
                 ...state,
                 loading: false,
-                ip: action.payload
+                ip: action.payload,
+                ok: true
             }
 
         case types.setError:
-            return intialState
+            return {
+                ...state,
+                ip: null,
+                loading: false,
+                ok: false
+            }
     
         default:
             return state
