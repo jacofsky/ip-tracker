@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/react-ip-tracker-HkrbjpnS9)
 - Live Site URL: [Netlify](https://jacofsky-ip-tracker.netlify.app)
 
 ## My process
